@@ -163,7 +163,7 @@
                         "id": "http://github.com/boutiques/boutiques-schema/input/type",
                         "type": "string",
                         "description": "Input type.",
-                        "enum": ["String", "File", "Flag", "Number", "Enum"]
+                        "enum": ["String", "File", "Flag", "Number", "Enum", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project"]
                     },
                     "description": {
                         "id": "http://github.com/boutiques/boutiques-schema/input/description",
@@ -273,7 +273,7 @@
                   },
                   {
                     "properties": {
-                      "type": { "enum": ["String", "File", "Number", "Enum"] }
+                      "type": { "enum": ["String", "File", "Number", "Enum", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project"] }
                     }
                   }
                 ],

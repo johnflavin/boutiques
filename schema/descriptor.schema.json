@@ -257,6 +257,11 @@
                         "id": "http://github.com/boutiques/boutiques-schema/input/max-list-entries",
                         "description": "Specify the maximum number of entries in the list. May only be used with List type inputs.",
                         "type": "number"
+                    },
+                    "path-to-value": {
+                        "id": "http://github.com/johnflavin/boutiques-schema/input/path-to-value",
+                        "description": "Specify a path at which the value can be found. Used for inputs of type File, XPath, JsonPath, and Config.",
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -313,7 +318,12 @@
                         }
                     },
                     "exclusive-minimum": ["minimum"],
-                    "exclusive-maximum": ["maximum"]
+                    "exclusive-maximum": ["maximum"],
+                    "path-to-value": {
+                        "properties": {
+                            "type": {"enum": ["File", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project"]}
+                        }
+                    }
                 }
 
             }

@@ -262,6 +262,11 @@
                         "id": "http://github.com/johnflavin/boutiques-schema/input/path-to-value",
                         "description": "Specify a path at which the value can be found. Used for inputs of type File, XPath, JsonPath, and Config.",
                         "type": "string"
+                    },
+                    "parent": {
+                        "id": "http://github.com/johnflavin/boutiques-schema/input/parent",
+                        "description": "The input id of an object to use as the parent for path queries.",
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -322,6 +327,11 @@
                     "path-to-value": {
                         "properties": {
                             "type": {"enum": ["File", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project"]}
+                        }
+                    },
+                    "parent": {
+                        "properties": {
+                            "type": {"enum": ["File", "XPath", "JsonPath", "Session", "Subject", "Scan", "Project"]}
                         }
                     }
                 }

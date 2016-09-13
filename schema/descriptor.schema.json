@@ -283,7 +283,7 @@
                   },
                   {
                     "properties": {
-                      "type": { "enum": ["String", "File", "Number", "Enum", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project", "Resource", "Assessor"] }
+                      "type": { "enum": ["String", "File", "Number", "Enum", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project", "Resource", "Assessor", "Property"] }
                     }
                   }
                 ],
@@ -326,12 +326,12 @@
                     "exclusive-maximum": ["maximum"],
                     "path-to-value": {
                         "properties": {
-                            "type": {"enum": ["File", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project", "Resource", "Assessor"]}
+                            "type": {"enum": ["File", "XPath", "JsonPath", "Config", "Session", "Subject", "Scan", "Project", "Resource", "Assessor", "Property"]}
                         }
                     },
                     "parent": {
                         "properties": {
-                            "type": {"enum": ["File", "XPath", "JsonPath", "Session", "Subject", "Scan", "Project", "Resource", "Assessor"]}
+                            "type": {"enum": ["File", "XPath", "JsonPath", "Session", "Subject", "Scan", "Project", "Resource", "Assessor", "Property"]}
                         }
                     }
                 }

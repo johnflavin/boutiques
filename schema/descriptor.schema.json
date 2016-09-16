@@ -163,7 +163,7 @@
                         "id": "http://github.com/boutiques/boutiques-schema/input/type",
                         "type": "string",
                         "description": "Input type.",
-                        "enum": ["String", "File", "Flag", "Number", "Enum"]
+                        "enum": ["String", "File", "Flag", "Number"]
                     },
                     "description": {
                         "id": "http://github.com/boutiques/boutiques-schema/input/description",
@@ -215,13 +215,10 @@
                         "id": "http://github.com/boutiques/boutiques-schema/input/default-value",
                         "description": "Default value of the input, used by the tool when no option is specified."
                     },
-                    "enum-value-choices": {
+                    "value-choices": {
                         "id": "http://github.com/boutiques/boutiques-schema/input/enum-value-choices",
-                        "description": "Permitted choices for input value. May only be used in conjunction with the enum type.",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
+                        "description": "Permitted choices for input value.",
+                        "type": "array"
                     },
                     "integer": {
                         "id": "http://github.com/boutiques/boutiques-schema/input/integer",
@@ -273,7 +270,7 @@
                   },
                   {
                     "properties": {
-                      "type": { "enum": ["String", "File", "Number", "Enum"] }
+                      "type": { "enum": ["String", "File", "Number"] }
                     }
                   }
                 ],
@@ -282,11 +279,6 @@
                     "command-line-flag-separator": ["command-line-flag"],
                     "min-list-entries": ["list"],
                     "max-list-entries": ["list"],
-                    "enum-value-choices": {
-                        "properties": {
-                            "type": {"enum": ["Enum"]}
-                        }
-                    },
                     "integer": {
                         "properties": {
                             "type": {"enum": ["Number"]}
